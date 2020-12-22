@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilosPaginaInicio.css">
+    <title>Petbounds|Página Inicio</title>
+</head>
+<body>
+    <div class="head">
+        <ul class="lista">
+            <a href="acceder.html" class="links" id="boton1">Acceder</a>
+            <a href="registro.html" class="links" id = "boton2">Crear cuenta</a>  
+        </ul>     
+    </div>
+    <div class="main">
+        <div class="formulario">
+            <form action="" class="forms">
+                <h1>Usuario</h1>
+                <input type="text" placeholder="Ingresa tu correo o usuario" required>
+                <h1>Contraseña</h1>
+                <input type="password" placeholder="Ingresa tu contraseña" required> 
+                <input type="submit" value="Ingresar" id="Ingresar">
+                <a id="olCon" href="">¿Has olvidado la contraseña?</a>  
+            </form>
+        </div>
+        <div class="sac">
+            <div class="sac1">
+                <div class="textoSac">
+                    <h1>Salva</h1>
+                    <p>Organizaciones rescatan y dan en adopción mascotas.</p>
+                </div>
+                <div class="imgSac">
+                    <img src="salva.jpg" alt="salva">
+                </div>    
+            </div>
+            <div class="sac1">
+                <div class="textoSac">
+                    <h1>Adopta</h1>
+                    <p>Adopta mascotas y dales una mejor calidad de vida.</p>
+                </div>
+                <div class="imgSac">
+                    <img src="adopta.jpg" alt="adopta">
+                </div>    
+            </div>
+            <div class="sac1">
+                <div class="textoSac">
+                    <h1>Cuida</h1>
+                    <p>Asegurate del bienestar de tus mascotas.</p>
+                </div>
+                <div class="imgSac">
+                    <img src="cuida.jpg" alt="cuida">
+                </div>    
+            </div>
+            <div class="navegador">
+                <div class="w3-left" onclick="plusDivs(-1)">&#10094;</div>
+                <span class="w3-badge demo w3-border" onclick="currentDiv(1)"></span>
+                <span class="w3-badge demo w3-border" onclick="currentDiv(2)"></span>
+                <span class="w3-badge demo w3-border" onclick="currentDiv(3)"></span>
+                <div class="w3-right" onclick="plusDivs(1)">&#10095;</div>
+            </div>
+            <script src="script.js"></script>
+        </div>
+    </div>
+    <div class="info">
+        <div class="info1">
+        </div>
+        <div class="infoImg1">
+        </div>
+    </div>
+</body>
+</html>
