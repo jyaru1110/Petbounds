@@ -349,13 +349,18 @@ p{
     .head img{
         display: none;
     }
-    .lista{
+    .media-type1{
+        display: flex;
+        justify-content: space-between;
         height: 95%;
+    }
+    .media-type2{
         display: flex;
         justify-content: space-between;
     }
     .main-registro{
         width: 40%;
+        padding-top: 15%;
     }
 }
 @media (max-width: 480px){
@@ -368,5 +373,6 @@ p{
     }
     .main-registro{
         width: 50%;
+        padding-top: 15%;
     }
 }
