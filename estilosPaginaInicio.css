@@ -30,7 +30,7 @@ html{
 .lista img{
     margin-right: 5%;
     border-radius:100px;
-    width: 35%;
+    width: 30%;
 }
 .links{
     color:black;
@@ -317,12 +317,14 @@ p{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding-top:10%;
     width: 98%;
+    height: 500px; 
     margin: 0 auto;
     display: grid;
     grid-template-columns: 15% 70% 15%;
 }
 .selectores{
-    display: flex;
+    display: grid;
+    grid-template-rows: 20% 80%;
 }
 .search-element{
     width:100%;
@@ -338,12 +340,35 @@ p{
     padding-left: 20%;
     border-radius: 25px;
 }
+.botones-selectores{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
 .search-element .icon{
     position: absolute;
     padding-left:5%;
     padding-top: 2.6%;
     color: #4f5b66;
 }
+.botones-selectores div{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    font-size: 1.5rem;
+    width: 35%;
+    height: 10%;
+    background-color: #8BD7FF;
+    border: solid #8BD7FF 0.5px;
+    border-radius: 10px;
+    padding-left: 3%;
+    margin-top: 5%;
+}
+.boton-c-c{
+    background: none;
+    border: none;
+}
+
 @media (max-width: 1000px) {
     .log-main{
         width: 25%;
@@ -372,6 +397,9 @@ p{
     .main-registro{
         width: 30%;
     }
+    .lista img{
+        width: 35%;
+    }
 }
 
 @media (max-width: 800px){
@@ -394,6 +422,9 @@ p{
         width: 40%;
         padding-top: 15%;
     }
+    .botones-selectores div{
+        width: 70%;
+    }
 }
 @media (max-width: 480px){
     .log-main{
@@ -406,5 +437,8 @@ p{
     .main-registro{
         width: 50%;
         padding-top: 15%;
+    }
+    .botones-selectores div{
+        width: 100%;
     }
 }
