@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Cuenta Usuario</title>
+    <title>Crear Cuenta Negocio</title>
     <link rel="stylesheet" href="./estilosPaginaInicio.css">
 </head>
 <body>
     <header class="head media-type2">
         <a href="paginaInicio.html"><img src="Petbounds.png" alt="logo"></a>
         <ul class="lista">
-            <a href="registroOrg.html" class="links boton1">Registra tu organización</a>
-            <a href="registroNeg.html" class="links boton1">Registra tu negocio</a>  
+            <a href="registroUsuario.html" class="links boton1">Registrate</a>
+            <a href="registroOrg.html" class="links boton1">Registra tu organización</a>  
         </ul>   
     </header>
     <div class="main-registro">
@@ -19,10 +19,10 @@
             <form action="" class="form-reg">
                 <h5>Correo electrónico</h5>
                 <input type="email" name="email" placeholder="Ingresa tu correo electrónico" autocomplete="email" required>
-                <h5>Nombre completo</h5>
-                <input type="text" name="nombre_com" placeholder="Ingresa tu nombre completo" autocomplete="name" required>
-                <h5>Nombre de usuario</h5>
-                <input type="text" name="nombre_us" placeholder="Ingresa tu nombre de usuario">
+                <h5>Negocio</h5>
+                <input type="text" name="nom_neg" placeholder="Ingresa el nombre de tu negocio" autocomplete="name" required>
+                <h5>Número telefónico</h5>
+                <input type="text" name="num_tel_neg" placeholder="Ingresa el numero telefónico de tu negocio">
                 <h5>Contraseña</h5>
                 <input type="password" name="contrasena" placeholder="Ingresa tu contraseña">
                 <div class="calificadores">
@@ -43,17 +43,8 @@
                         <p>Mayúsculas y minúsculas</p>
                     </div>
                 </div>
-                <div class="dos-texto-fila">
-                    <h5>Género</h5>
-                    <h5>Fecha de nacimiento</h5>
-                </div>
-                <div class="form-div-dos">
-                    <select name="genero" placeholder="Género" id="gen">
-                        <option value="hombre">Hombre</option>
-                        <option value="mujer">Mujer</option>
-                    </select>
-                    <input type="date" name="fecha" id="fecha">
-                </div>
+                <h5>Dirección</h5>
+                <input type="text" name="direccion_neg" placeholder="Ingresa la direccion de tu negocio">
                 <input type="submit" value="Regístrate" class="Ingresar" id="submit-form-reg">
             </form>
         </div>
