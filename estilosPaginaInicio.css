@@ -324,11 +324,11 @@ p{
     grid-template-columns: 20% 60% 20%;
 }
 .selectores{
-    display: grid;
-    grid-template-rows: 20% 80%;
+    display:block;
+    height: 300px;;
 }
 .search-element{
-    width:100%;
+    width:80%;
     vertical-align: middle;
     white-space: nowrap;
     position: relative;
@@ -336,10 +336,13 @@ p{
 .search-element input{
     width: 100%;
     border: solid  #63717f 1px;
-    font-size: 10pt;
     color: #63717f;
     padding-left: 20%;
     border-radius: 25px;
+}
+.flotante{
+    position: fixed;
+    width: 18%;
 }
 .botones-selectores{
     display: flex;
@@ -354,19 +357,25 @@ p{
 }
 .botones-selectores div{
     display: flex;
-    justify-content: space-around;
+    justify-content: pace-around;
     align-items:center;
     font-size: 1.5rem;
-    width: 40%;
-    height: 10%;
+    width: 38%;
+    height: 18%;
     border: solid #8BD7FF 0.5px;
     background-color: #8BD7FF;
     border-radius: 10px;
-    padding-left: 3%;
+    padding-left: 2%;
     margin-top: 5%;
 }
 .div-blue{
     background-color: #8BD7FF;
+}
+.div-blue button{
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 10%;
+    padding-bottom: 10%;
 }
 .boton-c-c{
     background: none;
@@ -432,7 +441,6 @@ p{
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-
 @media (max-width: 1000px) {
     .log-main{
         width: 25%;
@@ -507,5 +515,8 @@ p{
     .botones-selectores div{
         width: 100%;
         font-size:0rem;
+    }
+    .search span{
+        display:none;
     }
 }
