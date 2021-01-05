@@ -563,6 +563,9 @@ p{
     color:white;
     background-color: #75F06C;
 }
+.h5-servicios{
+    font-size: 2.5rem !important;
+}
 @media (max-width: 1000px) {
     .log-main{
         width: 25%;
@@ -618,6 +621,9 @@ p{
     }
     .check-box-container{
         padding-left: 20%;
+    }
+    .h5-servicios{
+        font-size: 2rem !important;
     }
 }
 @media (max-width: 800px){
