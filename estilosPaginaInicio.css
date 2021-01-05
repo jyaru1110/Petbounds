@@ -624,7 +624,7 @@ p{
     .log-main{
         width: 35%;
     }
-    .head img{
+    #logo{
         display: none;
     }
     .media-type1{
@@ -657,6 +657,15 @@ p{
         align-self: center;
         padding-top: 2%;
         padding-bottom: 2%;
+    }
+    .head img{
+        width: 50%;
+    }
+    .catalogo{
+        margin-top:5%;
+    }
+    .selectores{
+        margin-top: 20%;
     }
 }
 @media (max-width: 510px){
@@ -694,5 +703,11 @@ p{
         align-self: center;
         padding-top: 3%;
         padding-bottom: 3%;
+    }
+    .head img{
+        width: 50%;
+    }
+    .search-element{
+        width: 90%;
     }
 }
