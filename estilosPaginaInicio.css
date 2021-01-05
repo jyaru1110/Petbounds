@@ -199,7 +199,7 @@ p{
     border: 1px solid rgb(75, 75, 75);
 }
 .uni-calificador p{
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 .uni-calificador{
     display: flex;
@@ -315,9 +315,7 @@ p{
 .dos-texto-fila{
     display: grid;
     grid-template-columns: 50% 50%;
-}
-.form-div-dos{
-    padding-right: 4%;
+    font-size: 1.6rem;
 }
 #gen{
     width: 48%;
@@ -326,6 +324,7 @@ p{
     width: 48%;
 }
 .form-div-dos{
+    padding-right: 4%;
     display: flex;
     justify-content: space-between;
 }
@@ -485,6 +484,29 @@ p{
     box-shadow:2px 5px 5px 4px rgb(133, 133, 133); 
     margin-bottom: 5%;
 }
+.carnet-donaciones{
+    display: grid;
+    grid-template-rows: 20% 60% 20%;
+    padding: 3%;
+    padding-bottom: 5%;
+    margin-bottom: 5%;
+    margin-right: 3%;
+    border: solid rgb(201, 201, 201) 1px;
+    border-radius: 30px;
+    box-shadow:2px 5px 5px 4px rgb(133, 133, 133); 
+}
+.footer-carnet{
+    position: relative;
+    padding-top:5% ;
+    padding-left: 1.2%;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+.footer-carnet progress{
+    height: 50px;
+    width:70%;
+}
 .head-carnet{
     display: flex;
     justify-content: flex-start;
@@ -510,6 +532,20 @@ p{
     border: solid rgb(224, 224, 224) 1px;
     border-radius: 10px;
     grid-template-columns: 30% 70%;
+}
+.main-carnet-donaciones{
+    position: relative;
+    top:5%;
+    border: solid rgb(224, 224, 224) 1px;
+    border-radius: 10px;
+    padding-left: 1%;
+    margin-left:1% ;
+}
+.main-carnet-donaciones h5{
+    font-size: 3rem;
+}
+.main-carnet-donaciones p{
+    font-size: 2rem;
 }
 .main-carnet .img-carnet{
     width: 100%;
@@ -561,6 +597,18 @@ p{
     margin-right: 5%;
     border-radius: 9px;
     color:white;
+    background-color: #75F06C;
+}
+.donar{
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 0.5%;
+    padding-bottom: 0.6%;
+    border-radius: 9px;
+    color:white;
+    align-self: center;
     background-color: #75F06C;
 }
 .h5-servicios{
@@ -625,6 +673,18 @@ p{
     .h5-servicios{
         font-size: 2rem !important;
     }
+    .calificadores p{
+        font-size: 1rem;
+    }
+    .main-carnet-donaciones{
+        top:0%
+    }
+    .main-carnet-donaciones h5{
+        font-size: 2.5rem;
+    }
+    .main-carnet-donaciones p{
+        font-size: 1.8rem;
+    }
 }
 @media (max-width: 800px){
     .log-main{
@@ -673,6 +733,15 @@ p{
     .selectores{
         margin-top: 20%;
     }
+    .calificadores p{
+        font-size: 1.1rem;
+    }
+    .main-carnet-donaciones h5{
+        font-size: 2.6rem;
+    }
+    .main-carnet-donaciones p{
+        font-size: 1.5rem;
+    }
 }
 @media (max-width: 510px){
     .log-main{
@@ -715,5 +784,8 @@ p{
     }
     .search-element{
         width: 90%;
+    }
+    .calificadores p{
+        font-size: 1rem;
     }
 }
