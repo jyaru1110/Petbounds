@@ -1,16 +1,5 @@
 var slideIndex = 1;
-var colorState = false;
 showDivs(slideIndex);
-
-function changeColor(id,i){
-    var x = document.getElementsByClassName(id);
-    colorState =! colorState;
-    if(colorState){
-        x[i].style.backgroundColor = "#F07160";
-    }else{
-        x[i].style.backgroundColor = "#8BD7FF";
-    }
-}
 
 function plusDivs(n) {
     showDivs(slideIndex += n);
