@@ -38,5 +38,13 @@ $(document).ready(
         }else{
             $('.buttonAction4').css('background-color','#8BD7FF');
         }
+    }),
+    $('.conoceme').click(function(){
+        $('.carnet').css('opacity','0.1');
+        $('.principal-adoptame').css('display','inline');
+    }),
+    $('.botonCerrar').click(function(){
+        $('.carnet').css('opacity','1');
+        $('.principal-adoptame').css('display','none');
     })
 );
