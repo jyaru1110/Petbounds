@@ -19,6 +19,14 @@ $(document).ready(
             $('.div-menu').css('background-color','white');
         }
     }),
+    $('.linea-gestion button').click(function(){
+        $('.edit-mas').css('display','flex');
+        $('.main-adop-gea').css('opacity','0.1');
+    }),
+    $('.edit-mas .botonCerrar').click(function(){
+        $('.edit-mas').css('display','none');
+        $('.main-adop-gea').css('opacity','1');
+    }),
 
     function asyncLoop() {     
            $('.progreso').val(counter++);
@@ -41,6 +49,8 @@ $(document).ready(
     $('.lista-menu button:nth(0)').click(function(){
         $('.main-adop-reg').css('display','flex');
         $('.main-adop-gea').css('display','none');
+        $('.main-adop-gead').css('display','none');
+        $('.edit-mas').css('display','none');
         $('.lista-menu li:nth(0)').addClass('boton-menu-gray');
         $('.lista-menu li:nth(1)').removeClass('boton-menu-gray');
         $('.lista-menu li:nth(2)').removeClass('boton-menu-gray');
@@ -48,10 +58,20 @@ $(document).ready(
     $('.lista-menu button:nth(1)').click(function(){
         $('.main-adop-reg').css('display','none');
         $('.main-adop-gea').css('display','flex');
+        $('.main-adop-gea').css('opacity','1');
         $('.main-adop-gea').css('flex-direction','column');
         $('.lista-menu li:nth(0)').removeClass('boton-menu-gray');
         $('.lista-menu li:nth(1)').addClass('boton-menu-gray');
         $('.lista-menu li:nth(2)').removeClass('boton-menu-gray');
+    }),
+    $('.lista-menu button:nth(2)').click(function(){
+        $('.main-adop-reg').css('display','none');
+        $('.main-adop-gea').css('display','none');
+        $('.main-adop-gead').css('display','flex');
+        $('.edit-mas').css('display','none');
+        $('.lista-menu li:nth(0)').removeClass('boton-menu-gray');
+        $('.lista-menu li:nth(1)').removeClass('boton-menu-gray');
+        $('.lista-menu li:nth(2)').addClass('boton-menu-gray');
     }),
     $('.buttonAction1').click(function(){
         colorState =! colorState;

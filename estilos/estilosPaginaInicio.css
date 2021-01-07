@@ -851,6 +851,18 @@ p{
     justify-content: space-between;
     box-shadow:1px 4px 4px 3px rgb(165, 165, 165); 
 }
+.edit-mas{
+    width: 30%;
+    display: none;
+    margin-left: 35%;
+    padding:2%;
+    position: fixed;
+    border: solid #d3d3d3 0.5px;
+    border-radius: 30px;
+    justify-content: space-between;
+    box-shadow:1px 4px 4px 3px rgb(165, 165, 165);
+    background-color: white;
+}
 #registrar{
     padding-top: 0.5%;
     padding-bottom: 0.5%;
@@ -906,6 +918,7 @@ p{
 .linea-gestion button{
     margin-left: 15%;
     width: 20%;
+    font-size: 1.6rem;
 }
 .linea-imagen{
     width: 30%;
@@ -936,6 +949,9 @@ p{
 }
 .links-footer{
     padding-bottom: 1%;
+}
+.main-adop-gead{
+    display: none;
 }
 @media (max-width: 1000px) {
     .lista-menu{
