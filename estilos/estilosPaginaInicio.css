@@ -3,6 +3,11 @@
     padding:0%;
     margin:0%;
 }
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
 html{
     font-size: 62.5%;
 }
@@ -70,8 +75,9 @@ html{
     align-content: center;
     top: 230px;
     width:90%;
-    margin:0 auto;
+    margin:0 auto 32%;
     padding-top: 15%;
+    min-height: 50%;
 }
 .log-main .formulario{
     width: 100%;
@@ -166,12 +172,12 @@ p{
     font-size: 2rem;
 }
 .imgSac img{
-    height: 100%;
+    width: 100%;
 }
 .navegador{
     align-self: flex-end;
     display: grid;
-    grid-template-columns:auto 2% 2% 2% auto;
+    grid-template-columns:auto 3% 3% 3% auto;
 }
 .w3-right{
     justify-self: flex-end;
@@ -907,6 +913,30 @@ p{
 .linea-imagen img{
     width: 100%;
 }
+.footer{
+    bottom: 0;
+    height: 50px;
+}
+.footer a{
+    border-right: solid rgb(212, 212, 212) 0.1px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.content {
+    min-height: 100%;
+    margin: 0 auto -50px;
+}
+.footer ul{
+    display: inline;
+    height: 1px;
+}
+.footer a:hover{
+    background-color: #f3f3f3;
+}
+.links-footer{
+    padding-bottom: 1%;
+}
 @media (max-width: 1000px) {
     .lista-menu{
         width: 28%;
@@ -922,15 +952,16 @@ p{
         width:50%;
         margin:0 auto;
     }
+    .w3-badge{
+        height: 5px;
+        width: 5px;
+    }
     .sac{
         padding-top: 30%;
     }
     .sacs{
         display: flex;
         flex-direction: column;
-    }
-    .w3-badge{
-        display: none;
     }
     .head img{
         width:75%;
@@ -1137,7 +1168,9 @@ p{
     .lista-menu li:hover{
         background-color: #5bb155;
     }
-
+    .navegador{
+        grid-template-columns: auto 4% 4% 4% auto;
+    }
 }
 @media (max-width: 510px){
     .log-main{
@@ -1202,10 +1235,13 @@ p{
     .main-adop-org{
         padding-top: 15%;
     }
-    
     .lista-menu button{
         font-size: 1.5rem;
     }
+    .navegador{
+        grid-template-columns: auto 5% 5% 5% auto;
+    }
+    
 }
 
 @media (max-width: 376px){ 
