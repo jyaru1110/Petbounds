@@ -1,7 +1,13 @@
 var counter = 0;
 var colorState = false;
 var menuShow = false;
-$(document).ready( 
+$(document).ready(
+    function asyncLoop() {     
+        $('.progreso').val(counter++);
+        if (counter <= 100) {
+            setTimeout(asyncLoop, 50);
+        }           
+ }, 
     $(window).resize(function(){
         console.log($(window).width());
         if(screen.width>800){
@@ -19,10 +25,5 @@ $(document).ready(
             $('.div-menu').css('background-color','white');
         }
     }),
-    function asyncLoop() {     
-           $('.progreso').val(counter++);
-           if (counter <= 100) {
-               setTimeout(asyncLoop, 50);
-           }           
-    },
+    
 );
