@@ -1398,7 +1398,11 @@ p{
     }
 }
 
-@media (max-width: 376px){ 
+@media (max-width: 376px){
+    .lista a:nth-child(4){
+        height: 33px;
+        width: 33px;
+    } 
     .descripcion-mas p{
         margin-top: 25%;
     }
