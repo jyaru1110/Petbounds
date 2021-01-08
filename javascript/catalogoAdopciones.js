@@ -7,7 +7,7 @@
 $("body").append(html);*/
 
 function mostrarPerros(){
-    var htmlS = [];
+    var htmlS = '';
     var enlace = 'http://localhost:3000/api/mostrarP';
     $.ajax({
         type: 'GET',
@@ -71,7 +71,7 @@ function mostrarPerros(){
                 '</div>'
             );*/
             for (var element of mascotas){
-                htmlS.push(
+                /*htmlS.push(
                     '<div class="carnet">',
                         '<div class="head-carnet">',
                             '<img src="imagenes/patita.png" alt="">',
@@ -92,7 +92,7 @@ function mostrarPerros(){
                         '</ul>\n</div>\n</div>\n</div>\n<div class="descripcion-mas">',
                         '<p>' + element.Historia_Mascota + '</p>',
                         '</div>\n</div>\n</div>\n</div>\n</div>'
-                )
+                )*/
                 htmlS = '<div class="carnet">'+
                 '<div class="head-carnet">'+
                     '<img src="imagenes/patita.png" alt="">'+
@@ -122,4 +122,23 @@ function mostrarPerros(){
             console.log(error);
         }
     });
+}
+
+function gestPerros(){
+    var htmlS = '';
+    var idOrg = Cookies.get('id');
+    var enlace = 'http://localhost:3000/api/mostrarOrg?id=' + idOrg;
+        $.ajax({
+            type: 'GET',
+            url: enlace,
+            success: response => {
+                var tipo = response.resultado;
+                for (var element in tipo){
+                    
+                }
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
 }
