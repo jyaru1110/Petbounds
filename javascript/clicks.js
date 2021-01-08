@@ -55,6 +55,7 @@ $(document).on('click','.lista-menu button:nth(1)',function(){
     $('.info-aplicante-main embed:nth(0)').css('display','none');
     $('.info-aplicante').css('display','none'); 
     $('.main-adop-reg').css('display','none');
+    $('.main-adop-gead').css('display','none');
     $('.main-adop-gea').css('display','flex');
     $('.main-adop-gea').css('opacity','1');
     $('.main-adop-gea').css('flex-direction','column');
