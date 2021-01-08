@@ -1,6 +1,5 @@
 $(document).on('click', ".conoceme", function () {
     $('.carnet').css('opacity','0.1');
-    $('.principal-adoptame').css('display','inline');
 });
 $(document).on('click', ".botonCerrar", function () {
     $('.carnet').css('opacity','1');
@@ -14,7 +13,6 @@ $(document).on('click','.buttonAction4',function(){
             $('.buttonAction4').css('background-color','#8BD7FF');
         }
     }
-
 )
 $(document).on('click','.buttonAction3',function(){
     colorState =! colorState;
@@ -85,7 +83,6 @@ $(document).on('click','.div-menu span .botonCerrar',function(){
    }
 })
 $(document).on('click','.main-adop-gea .linea-gestion button',function(){
-    $('.edit-mas').css('display','flex');
     $('.main-adop-gea').css('opacity','0.1');
 })
 $(document).on('click','.edit-mas .botonCerrar',function(){
