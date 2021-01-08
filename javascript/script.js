@@ -25,6 +25,7 @@ function showDivs(n) {
     dots[slideIndex-1].className += " black";
 }
 function adoptame(n){
+    localStorage.setItem('idSel', n);
     var x = document.getElementById(n);
     x.style.display="block";
 }

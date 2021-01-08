@@ -274,3 +274,11 @@ function regMas() {
         return false;
     }
 }
+
+function regSol(){
+    idSel = localStorage.getItem('idSel');
+    console.log($('#id_of'+idSel).val());
+    $('#comp_dom'+idSel).val();
+    $('#comp_pago'+idSel).val();
+    return false;
+}

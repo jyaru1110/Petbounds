@@ -36,10 +36,10 @@ function mostrarPerros(){
                 '<img src="imagenes/perrito-ambar.jpg" alt="">'+
                 '</div>'+
                 '<div class="formulario-adoptame">'+
-                '<form action="">'+
+                '<form onsubmit="return regSol()">'+
                 '<div class="linea-input">'+
                 '<p>Identificación oficial:</p>'+
-                '<input type="file" name="id_of" id="id_of" required/>'+
+                '<input type="file" name="id_of" id="id_of'+element.ID_Mascota+'"/>'+
                 '<label for="id_of">'+
                 '<p>Sube tu Identificación</p>'+
                 '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">'+
@@ -50,7 +50,7 @@ function mostrarPerros(){
                 '</div>'+
                 '<div class="linea-input">'+
                 '<p>Comprobante de domicilio:</p>'+
-                '<input type="file" name="comp_dom" id="comp_dom" required/>'+
+                '<input type="file" name="comp_dom" id="comp_dom'+element.ID_Mascota+'"/>'+
                 '<label for="comp_dom">'+
                 '<p>Sube tu comprobante de domicilio</p>'+
                 '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">'+
@@ -61,7 +61,7 @@ function mostrarPerros(){
                 '</div>'+
                 '<div class="linea-input">'+
                 '<p>Comprobante de pago:</p>'+
-                '<input type="file" name="comp_pago" id="comp_pago" required/>'+
+                '<input type="file" name="comp_pago" id="comp_pago'+element.ID_Mascota+'"/>'+
                 '<label for="comp_pago">'+
                 '<p>Sube tu comprobante de pago</p>'+
                 '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">'+

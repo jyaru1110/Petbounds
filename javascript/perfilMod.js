@@ -25,12 +25,28 @@ function modUsu(){
     var nombre = $('#nom').val();
     var nick = $('#nick').val();
     var nacimiento = $('#fecha').val();
+    console.log($('#foto').val());
     var enlace = 'http://localhost:3000/api/modUsu?id=' + id + '&nom=' + nombre + '&pat=null&mat=null&nick=' + nick + '&nac=' + nacimiento;
     $.ajax({
         type: 'PUT',
         url: enlace,
         success: response => {
-            location.reload();
+            //location.reload();
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+    return false;
+}
+function borrarUsu(){
+    var correo = Cookies.get('correo');
+    var enlace = 'http://localhost:3000/api/borrarUsu?correo=' + correo;
+    $.ajax({
+        type: 'DELETE',
+        url: enlace,
+        success: response => {
+            location.href = 'paginaInicio.html'
         },
         error: function (error) {
             console.log(error);
