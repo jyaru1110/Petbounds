@@ -16,7 +16,7 @@ function mostrarPerros(){
                 '</div>'+
                 '<div class="main-carnet">'+
                     '<div class="img-carnet">'+
-                        '<img src="imagenes/perrito-ambar.jpg" alt="">'+
+                        '<img src="imagenes/img1.jpg" alt="">'+
                     '</div>'+
                     '<div class="relleno-carnet">\n<div class="texto-carnet">\n<div class="info-mas">\n<div class="nombre-cara">\n<div class="nombre-mas">'+
                     '<h5>' + element.Nombre_Mascota + '</h5>'+
