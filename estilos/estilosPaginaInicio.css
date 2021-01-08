@@ -31,16 +31,19 @@ html{
     display: flex;
     justify-content: flex-end;
     list-style: none;
+    margin-right: 5%;
 }
 .lista a:nth-child(4){
-    align-self: flex-end;
-    padding-top: 3%;
+    align-self: center;
+    width: 50px;
+    height: 50px;
 }
 .lista img{
-    align-self: flex-start;
+    align-self: flex-end;
     margin-right: 5%;
     border-radius:100px;
     width: 100%;
+    height: 100%;
 }
 .links{
     color:black;
@@ -1085,11 +1088,12 @@ p{
         width: 30%;
     }
     .lista a:nth-child(4){
-        align-self: flex-end;
-        padding-top: 5%;
+        width: 45px;
+        height: 45px;
     }
     .lista img{
-        width: 45%;
+        width: 100%;
+        height:100%;
     }
     .botones-selectores .list{
         width: 60%;
@@ -1212,9 +1216,6 @@ p{
         padding-top: 2%;
         padding-bottom: 2%;
     }
-    .head img{
-        width: 50%;
-    }
     .catalogo{
         margin-top:5%;
     }
@@ -1247,9 +1248,6 @@ p{
     }
     .div-imagen-perfil p{
         font-size: 1.3rem;
-    }
-    .lista a:nth-child(4){
-        padding-top: 1%;
     }
     .contenedor-adoptame{
         flex-direction: column;
@@ -1310,6 +1308,13 @@ p{
     .info-aplicante-main{
         width: 50%;
     }
+    .lista{
+        width: 100%;
+    }
+    .links{
+        padding: 2%;
+        padding-bottom: 2%;
+    }
 }
 @media (max-width: 510px){
     .log-main{
@@ -1346,9 +1351,6 @@ p{
         align-self: center;
         padding-top: 3%;
         padding-bottom: 3%;
-    }
-    .head img{
-        width: 50%;
     }
     .search-element{
         width: 90%;
