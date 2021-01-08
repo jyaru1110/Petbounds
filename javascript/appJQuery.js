@@ -24,5 +24,5 @@ $(document).ready(
            if (counter <= 100) {
                setTimeout(asyncLoop, 50);
            }           
-    }
+    },
 );

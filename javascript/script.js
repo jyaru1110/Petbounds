@@ -24,3 +24,11 @@ function showDivs(n) {
     x[slideIndex-1].style.display = "flex";  
     dots[slideIndex-1].className += " black";
 }
+function adoptame(n){
+    var x = document.getElementById(n);
+    x.style.display="block";
+}
+function ver(n){
+    var x = document.getElementById(n);
+    x.style.display="flex";
+}
