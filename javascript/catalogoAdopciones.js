@@ -111,11 +111,11 @@ function mostrarPerros(){
                 '<li class="links">' + element.Edad_Mascota + '</li>'+
                 '</ul>\n</div>\n</div>\n</div>\n<div class="descripcion-mas">'+
                 '<p>' + element.Historia_Mascota + '</p>'+
-                '</div>\n</div>\n</div>\n</div>\n</div>'
+                '</div>\n</div>\n</div>\n</div>\n</div>';
+                $('.catalogo').append(htmlS);
             }
             /*htmlS.push('</div>', '<div class="selectores-org">\n</div>', '</div>', '<script src="javascript/appJQuery.js">');*/
             //htmlS.join('');
-            $('.catalogo').append(htmlS);
         },
         error: function(error){
             console.log(error);
@@ -132,8 +132,17 @@ function gestPerros(){
             url: enlace,
             success: response => {
                 var tipo = response.resultado;
-                for (var element in tipo){
-                    
+                console.log(tipo[0].Nombre_Mascota);
+                for (var ele of tipo){
+                    console.log(ele);
+                    htmlS = '<div class="linea-gestion">' + 
+                                '<div class="linea-imagen">' + 
+                                    '<img src="imagenes/perrito-ambar.jpg" alt="">' + 
+                                '</div>' + 
+                                '<h5>' + ele.Nombre_Mascota + '</h5>' + 
+                                '<button class="botonGE boton2">Ver</button>' + 
+                            '</div>';
+                    $('.main-adop-gea').append(htmlS);
                 }
             },
             error: function (error) {

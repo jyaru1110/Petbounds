@@ -55,7 +55,7 @@ function validacionInicio() {
                     window.location.href = "adopciones.html";
                 }
                 else if (tipo == 0){
-                    contras.val() = '';
+                    $('#contra').val() = '';
                     document.getElementById("errorContras").innerHTML = "Contraseña incorrecta";
                     $('#errorCo').css('display','block');
                     $('#errorCo').css('color','red');
