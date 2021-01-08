@@ -1,95 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adopciones</title>
-    <link rel="stylesheet" href="./estilos/estilosPaginaInicio.css">
-    
-</head>
-<body>
-    <header class="head media-type2">
-        <a href="paginaInicio.html" ><img src="imagenes/Petbounds.png" alt="logo" id="logo"></a>
-        <ul class="lista">
-            <a href="adopciones.html" class="links boton1 button-gray">Adopciones</a>
-            <a href="servicios.html" class="links boton1">Servicios</a>  
-            <a href="donaciones.html" class="links boton1">Donaciones</a>
-            <a href="perfil.html"><img src="imagenes/la mujer de la perla.jpg" alt="foto perfil"></a>
-        </ul>   
-    </header>
-    <div class="main-adop">
-        <div  class="selectores">
-            <div class="flotante">
-            <div class="search-element">
-                <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                </svg></span>
-                <input type="search" name="buscar" placeholder="Busca en petbounds">
-            </div>
-            <div class="botones-selectores">
-                    <button class="div-blue buttonAction1" >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                            <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
-                        </svg>
-                        <p>Perros</p> 
-                    </button><button class="div-blue buttonAction2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                            <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
-                        </svg>
-                        <p>Gatos</p> 
-                    </button>
-            </div>
-            </div>
-        </div>
-        <div class="catalogo">
-           <div class="carnet">
-                <div class="head-carnet">
-                    <img src="imagenes/patita.png" alt="">
-                    <p>Perrito gordos</p>
-                </div>
-                <div class="main-carnet">
-                    <div class="img-carnet">
-                        <img src="imagenes/perrito-ambar.jpg" alt="">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Adopciones</title>
+        <link rel="stylesheet" href="./estilos/estilosPaginaInicio.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="javascript/catalogoAdopciones.js"></script>
+    </head>
+    <body onload="mostrarPerros()">
+        <header class="head media-type2">
+            <a href="adopciones.html" ><img src="imagenes/Petbounds.png" alt="logo" id="logo"></a>
+            <ul class="lista">
+                <a href="adopciones.html" class="links boton1 button-gray">Adopciones</a>
+                <a href="servicios.html" class="links boton1">Servicios</a>  
+                <a href="donaciones.html" class="links boton1">Donaciones</a>
+                <a href="perfil.html"><img src="imagenes/la mujer de la perla.jpg" alt="foto perfil"></a>
+            </ul>   
+        </header>
+        <div class="main-adop">
+            <div  class="selectores">
+                <!--<div class="flotante">
+                    <div class="search-element">
+                        <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg></span>
+                        <input type="search" name="buscar" placeholder="Busca en petbounds">
                     </div>
-                    <div class="relleno-carnet">
-                        <div class="texto-carnet">
-                            <div class="info-mas">
-                                <div class="nombre-cara">
-                                    <div class="nombre-mas">
-                                        <h5>Penélope</h5>
-                                        <a class="conoceme">Adóptame</a>
-                                    </div>
-                                    <div class="carac-mas">
-                                        <ul class="lista-carac">
-                                            <li class="links">Beagle</li>
-                                            <li class="links">7 meses</li>
-                                            <li class="links">Macho</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="descripcion-mas">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas consectetur architecto ex laudantium natus quas molestiae, beatae delectus inventore dicta, eius iure earum sunt pariatur? Architecto unde nobis facere ea!</p>
-                            </div>
+                    <div class="botones-selectores">
+                        <button class="div-blue buttonAction1" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                            </svg>
+                            <p>Perros</p> 
+                        </button><button class="div-blue buttonAction2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                            </svg>
+                            <p>Gatos</p> 
+                        </button>
+                    </div>
+                </div>-->
+            </div>
+            <div class="catalogo">
+                <div class="principal-adoptame">
+                    <div class="titulo-adoptame">
+                        <h1>Adopta a Penélope</h1>
+                    </div>
+                    <div class="contenedor-adoptame">
+                        <div class="img-carnet">
+                            <img src="imagenes/perrito-ambar.jpg" alt="">
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="principal-adoptame">
-                <div class="titulo-adoptame">
-                    <h1>Adopta a Penélope</h1>
-                </div>
-                <div class="contenedor-adoptame">
-                    <div class="img-carnet">
-                        <img src="imagenes/perrito-ambar.jpg" alt="">
-                    </div>
-                    <div class="formulario-adoptame">
-                        <form action="">
-                            <div class="linea-input">
-                                <p>Identificación oficial:</p>
-                                <input type="file" name="id_of" id="id_of" required/>
+                        <div class="formulario-adoptame">
+                            <form action="">
+                                <div class="linea-input">
+                                    <p>Identificación oficial:</p>
+                                    <input type="file" name="id_of" id="id_of" required/>
                                     <label for="id_of">
                                         <p>Sube tu Identificación</p>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">
@@ -97,10 +65,10 @@
                                             <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/>
                                         </svg> 
                                     </label>
-                            </div>
-                            <div class="linea-input">
-                                <p>Comprobante de domicilio:</p>
-                                <input type="file" name="comp_dom" id="comp_dom" required/>
+                                </div>
+                                <div class="linea-input">
+                                    <p>Comprobante de domicilio:</p>
+                                    <input type="file" name="comp_dom" id="comp_dom" required/>
                                     <label for="comp_dom">
                                         <p>Sube tu comprobante de domicilio</p>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">
@@ -108,10 +76,10 @@
                                             <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/>
                                         </svg> 
                                     </label>
-                            </div>
-                            <div class="linea-input">
-                                <p>Comprobante de pago:</p>
-                                <input type="file" name="comp_pago" id="comp_pago" required/>
+                                </div>
+                                <div class="linea-input">
+                                    <p>Comprobante de pago:</p>
+                                    <input type="file" name="comp_pago" id="comp_pago" required/>
                                     <label for="comp_pago">
                                         <p>Sube tu comprobante de pago</p>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">
@@ -119,104 +87,137 @@
                                             <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/>
                                         </svg> 
                                     </label>
-                            </div>
-                            <button type="submit" class="botonGE boton2 boton-subir">Subir</button>
-                        </form>
+                                </div>
+                                <button type="submit" class="botonGE boton2 boton-subir">Subir</button>
+                            </form>
+                        </div>
+                        <button class="botonCerrar">
+                            <svg xmlns="http://www.w3.org/2000/svg" color="#F07160" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                            </svg>
+                        </button>
                     </div>
-                    <button class="botonCerrar">
-                        <svg xmlns="http://www.w3.org/2000/svg" color="#F07160" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-                        </svg>
-                    </button>
                 </div>
-            </div>
-            <div class="carnet">
-                <div class="head-carnet">
-                    <img src="imagenes/patita.png" alt="">
-                    <p>Perrito gordos</p>
-                </div>
-                <div class="main-carnet">
-                    <div class="img-carnet">
-                        <img src="imagenes/perrito-ambar.jpg" alt="">
+                <div class="carnet">
+                    <div class="head-carnet">
+                        <img src="imagenes/patita.png" alt="">
+                        <p>Perrito gordos</p>
                     </div>
-                    <div class="relleno-carnet">
-                        <div class="texto-carnet">
-                            <div class="info-mas">
-                                <div class="nombre-cara">
-                                    <div class="nombre-mas">
-                                        <h5>Penélope</h5>
-                                        <a class="conoceme">Adóptame</a>
-                                    </div>
-                                    <div class="carac-mas">
-                                        <ul class="lista-carac">
-                                            <li class="links">Beagle</li>
-                                            <li class="links">7 meses</li>
-                                            <li class="links">Macho</li>
-                                        </ul>
+                    <div class="main-carnet">
+                        <div class="img-carnet">
+                            <img src="imagenes/perrito-ambar.jpg" alt="">
+                        </div>
+                        <div class="relleno-carnet">
+                            <div class="texto-carnet">
+                                <div class="info-mas">
+                                    <div class="nombre-cara">
+                                        <div class="nombre-mas">
+                                            <h5>Penélope</h5>
+                                            <a class="conoceme">Adóptame</a>
+                                        </div>
+                                        <div class="carac-mas">
+                                            <ul class="lista-carac">
+                                                <li class="links">Beagle</li>
+                                                <li class="links">7 meses</li>
+                                                <li class="links">Macho</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="descripcion-mas">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas consectetur architecto ex laudantium natus quas molestiae, beatae delectus inventore dicta, eius iure earum sunt pariatur? Architecto unde nobis facere ea!</p>
+                                </div>
                             </div>
-                            <div class="descripcion-mas">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas consectetur architecto ex laudantium natus quas molestiae, beatae delectus inventore dicta, eius iure earum sunt pariatur? Architecto unde nobis facere ea!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carnet">
+                    <div class="head-carnet">
+                        <img src="imagenes/patita.png" alt="">
+                        <p>Perrito gordos</p>
+                    </div>
+                    <div class="main-carnet">
+                        <div class="img-carnet">
+                            <img src="imagenes/perrito-ambar.jpg" alt="">
+                        </div>
+                        <div class="relleno-carnet">
+                            <div class="texto-carnet">
+                                <div class="info-mas">
+                                    <div class="nombre-cara">
+                                        <div class="nombre-mas">
+                                            <h5>Penélope</h5>
+                                            <a class="conoceme">Adóptame</a>
+                                        </div>
+                                        <div class="carac-mas">
+                                            <ul class="lista-carac">
+                                                <li class="links">Beagle</li>
+                                                <li class="links">7 meses</li>
+                                                <li class="links">Macho</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="descripcion-mas">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas consectetur architecto ex laudantium natus quas molestiae, beatae delectus inventore dicta, eius iure earum sunt pariatur? Architecto unde nobis facere ea!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carnet">
+                    <div class="head-carnet">
+                        <img src="imagenes/patita.png" alt="">
+                        <p>Perrito gordos</p>
+                    </div>
+                    <div class="main-carnet">
+                        <div class="img-carnet">
+                            <img src="imagenes/perrito-ambar.jpg" alt="">
+                        </div>
+                        <div class="relleno-carnet">
+                            <div class="texto-carnet">
+                                <div class="info-mas">
+                                    <div class="nombre-cara">
+                                        <div class="nombre-mas">
+                                            <h5>Penélope</h5>
+                                            <a class="conoceme">Adóptame</a>
+                                        </div>
+                                        <div class="carac-mas">
+                                            <ul class="lista-carac">
+                                                <li class="links">Beagle</li>
+                                                <li class="links">7 meses</li>
+                                                <li class="links">Macho</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="descripcion-mas">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas consectetur architecto ex laudantium natus quas molestiae, beatae delectus inventore dicta, eius iure earum sunt pariatur? Architecto unde nobis facere ea!</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="carnet">
-                <div class="head-carnet">
-                    <img src="imagenes/patita.png" alt="">
-                    <p>Perrito gordos</p>
-                </div>
-                <div class="main-carnet">
-                    <div class="img-carnet">
-                        <img src="imagenes/perrito-ambar.jpg" alt="">
+            <div class="selectores-org">
+                <!--<div class="botones-selectores">
+                    <div class="flotante">
+                        <label class="check-box-container">Perritos gordos
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="check-box-container">Perritos encarcelados
+                            <input type="checkbox"  checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="check-box-container">Salva gatitos
+                            <input type="checkbox"  checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
                     </div>
-                    <div class="relleno-carnet">
-                        <div class="texto-carnet">
-                            <div class="info-mas">
-                                <div class="nombre-cara">
-                                    <div class="nombre-mas">
-                                        <h5>Penélope</h5>
-                                        <a class="conoceme">Adóptame</a>
-                                    </div>
-                                    <div class="carac-mas">
-                                        <ul class="lista-carac">
-                                            <li class="links">Beagle</li>
-                                            <li class="links">7 meses</li>
-                                            <li class="links">Macho</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="descripcion-mas">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas consectetur architecto ex laudantium natus quas molestiae, beatae delectus inventore dicta, eius iure earum sunt pariatur? Architecto unde nobis facere ea!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div>-->
             </div>
         </div>
-        <div class="selectores-org">
-            <div class="botones-selectores">
-                <div class="flotante">
-                <label class="check-box-container">Perritos gordos
-                    <input type="checkbox" checked="checked">
-                    <span class="checkmark"></span>
-                  </label>
-                  <label class="check-box-container">Perritos encarcelados
-                    <input type="checkbox"  checked="checked">
-                    <span class="checkmark"></span>
-                  </label>
-                  <label class="check-box-container">Salva gatitos
-                    <input type="checkbox"  checked="checked">
-                    <span class="checkmark"></span>
-                  </label>
-                </div>
-            </div>
-        </div>
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         <script src="javascript/appJQuery.js"></script>
-    </div>
-</body>
-</html>
+    </body>
+    </html>
