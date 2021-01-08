@@ -90,7 +90,6 @@ function mostrarPerros(){
             console.log(error);
         }
     });
-    console.log(listaMas);
 }
 
 function gestPerros(){
