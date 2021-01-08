@@ -1163,6 +1163,9 @@ p{
     .linea-gestion{
         width: 70%;
     }
+    .descripcion-mas p{
+        margin-top: 13%;
+    }
 }
 
 @media (max-width: 800px){
@@ -1394,6 +1397,9 @@ p{
 }
 
 @media (max-width: 376px){ 
+    .descripcion-mas p{
+        margin-top: 25%;
+    }
     .main-adop-org{
         padding-top: 20%;
     }
