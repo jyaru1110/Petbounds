@@ -42,16 +42,27 @@ $(document).ready(
     $('.info-aplicante-main button:nth(0)').click(
         function(){
             $('.info-aplicante-main embed:nth(0)').css('display','flex');
+            $('#botonCerrar-embeds').css('display','block');
         }
     ),
     $('.info-aplicante-main button:nth(1)').click(
         function(){
             $('.info-aplicante-main embed:nth(1)').css('display','flex');
+            $('#botonCerrar-embeds').css('display','block');
         }
     ),
     $('.info-aplicante-main button:nth(2)').click(
         function(){
             $('.info-aplicante-main embed:nth(2)').css('display','flex');
+            $('#botonCerrar-embeds').css('display','block');
+        }
+    ),
+    $('#botonCerrar-embeds').click(
+        function(){
+            $('.info-aplicante-main embed:nth(1)').css('display','none');
+            $('.info-aplicante-main embed:nth(0)').css('display','none');
+            $('.info-aplicante-main embed:nth(2)').css('display','none');
+            $('#botonCerrar-embeds').css('display','none');
         }
     ),
     function asyncLoop() {     

@@ -1043,6 +1043,15 @@ p{
 .info-aplicante-main h5{
     margin-bottom: 5%;
 }
+#botonCerrar-embeds{
+    display: none;
+    position: fixed;
+    bottom: 87.1%;
+    margin-left: 53.5%;
+    background:none;
+    border: none;
+    cursor: pointer;
+}
 @media (max-width: 1000px) {
     .lista-menu{
         width: 28%;
