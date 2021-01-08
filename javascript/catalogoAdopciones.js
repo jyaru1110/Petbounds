@@ -1,4 +1,6 @@
 function mostrarPerros(){
+    var url = Cookies.get('foto');
+    $('#fotoHead').attr('src', url);
     var htmlS = '';
     var enlace = 'http://localhost:3000/api/mostrarP';
     $.ajax({
@@ -40,7 +42,7 @@ function mostrarPerros(){
                 '<div class="linea-input">'+
                 '<p>Identificación oficial:</p>'+
                 '<input type="file" name="id_of" id="id_of'+element.ID_Mascota+'"/>'+
-                '<label for="id_of">'+
+                '<label for="id_of'+element.ID_Mascota+'">'+
                 '<p>Sube tu Identificación</p>'+
                 '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">'+
                 '<path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>'+
@@ -51,7 +53,7 @@ function mostrarPerros(){
                 '<div class="linea-input">'+
                 '<p>Comprobante de domicilio:</p>'+
                 '<input type="file" name="comp_dom" id="comp_dom'+element.ID_Mascota+'"/>'+
-                '<label for="comp_dom">'+
+                '<label for="comp_dom'+element.ID_Mascota+'">'+
                 '<p>Sube tu comprobante de domicilio</p>'+
                 '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">'+
                 '<path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>'+
@@ -62,7 +64,7 @@ function mostrarPerros(){
                 '<div class="linea-input">'+
                 '<p>Comprobante de pago:</p>'+
                 '<input type="file" name="comp_pago" id="comp_pago'+element.ID_Mascota+'"/>'+
-                '<label for="comp_pago">'+
+                '<label for="comp_pago'+element.ID_Mascota+'">'+
                 '<p>Sube tu comprobante de pago</p>'+
                 '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">'+
                 '<path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>'+
