@@ -928,10 +928,12 @@ p{
     font-size: 1.6rem;
 }
 .linea-imagen{
-    width: 30%;
+    width: 150px;
+    height: 150px;
 }
 .linea-imagen img{
     width: 100%;
+    height: 100%;
 }
 .footer{
     bottom: 0;
@@ -1410,6 +1412,10 @@ p{
         width: 30%;
         font-size: 1.5rem;
     }
+    .linea-imagen{
+        width: 130px;
+        height: 130px;
+    }
 }
 
 @media (max-width: 376px){
@@ -1504,5 +1510,9 @@ p{
     }
     .main-adop-gead h5{
         font-size: 1.8rem;
+    }
+    .linea-imagen{
+        width: 110px;
+        height: 110px;
     }
 }
