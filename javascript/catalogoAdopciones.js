@@ -3,7 +3,6 @@
         '<h1 class="tutorial-heading">' + title + '<h1>',
     '</div>'
 ].join("\n");
-
 $("body").append(html);*/
 
 function mostrarPerros(){
