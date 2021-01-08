@@ -6,16 +6,18 @@
     <title>Adopciones</title>
     <link rel="stylesheet" href="estilos/estilosPaginaInicio.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <script src="javascript/clicks.js"></script>
+    <script src="javascript/foto.js"></script>
 </head>
-<body>
+<body onload="fotoLoad()">
     <header class="head media-type2">
         <a href="adopciones.html" ><img src="imagenes/Petbounds.png" alt="logo" id="logo"></a>
         <ul class="lista">
             <a href="adopciones.html" class="links boton1">Adopciones</a>
             <a href="servicios.html" class="links boton1">Servicios</a>  
             <a href="donaciones.html" class="links boton1  button-gray">Donaciones</a>
-            <a href="perfil.html"><img src="imagenes/la mujer de la perla.jpg" alt="foto perfil"></a>
+            <a href="perfil.html"><img src="imagenes/la mujer de la perla.jpg" alt="foto perfil" id="fotoHead"></a>
         </ul>   
     </header>
     <div class="main-don">
