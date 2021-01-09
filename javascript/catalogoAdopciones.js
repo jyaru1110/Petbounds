@@ -7,6 +7,7 @@ function mostrarPerros(){
         type: 'GET',
         url: enlace,
         success: response => {
+            console.log(response);
             var mascotas = response.resultado;
             for (var element of mascotas){
                 htmlS = '<div class="carnet">'+
@@ -16,7 +17,7 @@ function mostrarPerros(){
                 '</div>'+
                 '<div class="main-carnet">'+
                     '<div class="img-carnet">'+
-                        '<img src="imagenes/img1.jpg" alt="">'+
+                        '<img src="'+ element.Foto_Mascota + '" alt="">'+
                     '</div>'+
                     '<div class="relleno-carnet">\n<div class="texto-carnet">\n<div class="info-mas">\n<div class="nombre-cara">\n<div class="nombre-mas">'+
                     '<h5>' + element.Nombre_Mascota + '</h5>'+
@@ -35,7 +36,7 @@ function mostrarPerros(){
                 '</div>'+
                 '<div class="contenedor-adoptame">'+
                 '<div class="img-carnet">'+
-                '<img src="imagenes/perrito-ambar.jpg" alt="">'+
+                '<img src="' + element.Foto_Mascota + '" alt="">'+
                 '</div>'+
                 '<div class="formulario-adoptame">'+
                 '<form onsubmit="return regSol()">'+
@@ -93,6 +94,40 @@ function mostrarPerros(){
 }
 
 function gestPerros(){
+    const fileSelector = document.getElementById('file');
+    fileSelector.addEventListener('change', (event) => {
+        const fileList = event.target.files;
+        console.log(fileList);
+        var enlace = 'http://localhost:3000/api/foto?nom=' + fileList[0].name + '&cont=' + fileList[0].type;
+        $.ajax({
+            type: 'GET',
+            url: enlace,
+            success: response => {
+                const formData = new FormData();
+                Object.keys(response.data.fields).forEach(key => {
+                    formData.append(key, response.data.fields[key]);
+                });
+                formData.append("file", fileList[0]);
+                const xhr = new XMLHttpRequest();
+                xhr.open("POST", response.data.url, true);
+                xhr.send(formData);
+                xhr.onload = function () {
+                    if (this.status === 204) {
+                        var liga = 'https://archivospetbounds.s3-us-west-2.amazonaws.com/' + fileList[0].name;
+                        $('#imagenMas').attr('src', liga);
+                        console.log('https://archivospetbounds.s3-us-west-2.amazonaws.com/' + fileList[0].name);
+                        Cookies.set('fotoMas', liga); 
+                    } 
+                    else{
+                        console.log(this.responseText);
+                    }
+                };
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
+    });
     var htmlS = '';
     var idOrg = Cookies.get('id');
     var enlace = 'http://localhost:3000/api/mostrarOrg?id=' + idOrg;
@@ -106,16 +141,16 @@ function gestPerros(){
                     console.log(ele);
                     htmlS = '<div class="linea-gestion">' + 
                                 '<div class="linea-imagen">' + 
-                                    '<img src="imagenes/perrito-ambar.jpg" alt="">' + 
+                                    '<img src="' + ele.Foto_Mascota + '" alt="">' + 
                                 '</div>' + 
                                 '<h5>' + ele.Nombre_Mascota + '</h5>' + 
                                 '<button class="botonGE boton2" onClick=ver("'+ele.ID_Mascota+'")>Ver</button>' + 
                             '</div>';
                     htmlS1 = '<div class="edit-mas" id='+ele.ID_Mascota+'>'+
                     '<div class="div-imagen-perfil">'+
-                    '<img src="imagenes/perrito-ambar.jpg" alt="foto">'+
-                    '<input type="file" name="file" id="file"/>'+
-                    '<label for="file">'+
+                    '<img src="' + ele.Foto_Mascota + '" alt="foto" id="foto'+ele.ID_Mascota+'">'+
+                    '<input type="file" name="file" id="fileMod'+ele.ID_Mascota+'"/>'+
+                    '<label for="fileMod'+ele.ID_Mascota+'">'+
                     '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">'+
                     '<path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>'+
                     '<path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/>'+
@@ -124,16 +159,13 @@ function gestPerros(){
                     '</label>'+
                     '</div>'+
                     '<div class="form-reg-div-reg">'+
-                    '<form action="form-reg-reg">'+
-                    '<input type="text" name="nom_mas" placeholder="'+ele.Nombre_Mascota+'">'+
-                    '<input type="text" name="raza" placeholder="'+ele.Raza_Mascota+'">'+
-                    '<input type="number" name="edad" placeholder="'+ele.Edad_Mascota+'">'+
-                    '<input type="text" name="descrip" placeholder="'+ele.Historia_Mascota+'">'+
+                    '<form onsubmit="return modMas()">'+
+                    '<input type="text" name="nom_mas" id="nom'+ele.ID_Mascota+'" value="'+ele.Nombre_Mascota+'">'+
+                    '<input type="text" name="raza" id="raza'+ele.ID_Mascota+'" value="'+ele.Raza_Mascota+'">'+
+                    '<input type="text" name="edad"  id="edad'+ele.ID_Mascota+'" value="'+ele.Edad_Mascota+'">'+
+                    '<input type="text" name="descrip" id="desc'+ele.ID_Mascota+'" value="'+ele.Historia_Mascota+'">'+
                     '<div class="form-div-dos">'+
-                    '<select name="especie" autofocus="'+ele.Tipo_Mascota+'" placeholder="Género">'+
-                    '<option value="Perro">Perro</option>'+
-                    '<option value="Gato">Gato</option>'+
-                    '</select>'+
+                    '<p id="tipo'+ ele.ID_Mascota +'">' + ele.Tipo_Mascota + '</p>' + 
                     '<button type="submit" class="botonGE  boton2" id="registrar">Registrar</button>'+
                     '</div>'+
                     '</form>'+

@@ -228,9 +228,9 @@ function regMas() {
     var desc = document.getElementById("desc").value;
     var tipo = document.getElementById("tipo").value;
     var id = Cookies.get('id');
-
+    var foto = Cookies.get('fotoMas');
     if (/[a-zA-z]/.test(nombre) && /[a-zA-z]/.test(raza)) {
-        var enlace = 'http://localhost:3000/api/altaMas?id=' + id + '&tipo=' + tipo + '&raza=' + raza + '&edad=' + edad + '&hist=' + desc + '&nom=' + nombre + '&foto=' + null;
+        var enlace = 'http://localhost:3000/api/altaMas?id=' + id + '&tipo=' + tipo + '&raza=' + raza + '&edad=' + edad + '&hist=' + desc + '&nom=' + nombre + '&foto=' + foto;
         $.ajax({
             type: 'POST',
             url: enlace,
@@ -246,6 +246,7 @@ function regMas() {
                     document.getElementById("edad").innerHTML = '';
                     document.getElementById("desc").innerHTML = '';
                     document.getElementById("tipo").innerHTML = '';
+                    location.reload();
                 }
                 else if (tipo == false) {
                     document.getElementById("avisos").innerHTML = "Ocurrió un error";
@@ -276,9 +277,62 @@ function regMas() {
 }
 
 function regSol(){
-    idSel = localStorage.getItem('idSel');
-    console.log($('#id_of'+idSel).val());
-    $('#comp_dom'+idSel).val();
-    $('#comp_pago'+idSel).val();
+    var id = Cookies.get('id');
+    var idSel = localStorage.getItem('idSel');
+    var idOf = Cookies.get('idOf');
+    var comp_dom = Cookies.get('comp_dom');
+    var comp_pago = Cookies.get('comp_pago');
+    var enlace = 'http://localhost:3000/api/regSolicitud?usu=' + id + '&mas=' + idSel + '&identi=' + idOf + '&comp=' + comp_dom + '&pago=' + comp_pago;
+    $.ajax({
+        type: 'POST',
+        url: enlace,
+        success: response => {
+            var tipo = response.resultado;
+            if (tipo) {
+                location.reload();
+            }
+            else if (tipo == false) {
+                console(response.error);
+            }
+        },
+        error: function (error) {
+            if (error.responseJSON.resultado == false) {
+                console.log(error.responseJSON.error);
+            }
+        }
+    });
+    return false;
+}
+
+function modMas(){
+    var id = localStorage.getItem('idSelVer');
+    var tipo = $('#tipo' + id).text();
+    var raza = $('#raza' + id).val();
+    console.log(raza);
+    var edad = $('#edad' + id).val();
+    var hist = $('#desc' + id).val();
+    var nom = $('#nom' + id).val();
+    var foto = Cookies.get('FotoModMas');
+    console.log(foto);
+    var enlace = 'http://localhost:3000/api/modMas?id=' + id + '&tipo=' + tipo + '&raz=' + raza + '&edad=' + edad + '&hist=' + hist + '&nom=' + nom + '&foto=' + foto;
+    $.ajax({
+        type: 'PUT',
+        url: enlace,
+        success: response => {
+            var tipo = response.resultado;
+            if (tipo) {
+                console.log('si');
+                location.reload();
+            }
+            else if (tipo == false) {
+                console(response.error);
+            }
+        },
+        error: function (error) {
+            if (error.responseJSON.resultado == false) {
+                console.log(error.responseJSON.error);
+            }
+        }
+    });
     return false;
 }
