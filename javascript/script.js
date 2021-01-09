@@ -37,4 +37,5 @@ function verSolicitante(n){
     var id="id"+n;
     var x = document.getElementById(id);
     x.style.display="flex";
+    
 }

@@ -90,8 +90,7 @@ $(document).on('click','.edit-mas .botonCerrar',function(){
     $('.main-adop-gea').css('opacity','1');
 })
 $(document).on('click','.main-adop-gead .linea-gestion button',function(){
-    $('.main-adop-gead').css('display','none');            
-    $('.info-aplicante').css('display','flex');            
+    $('.main-adop-gead').css('display','none');             
 })
 $(document).on('click','.info-aplicante .icono button',function () {
     $('.main-adop-gead').css('display','flex');           
