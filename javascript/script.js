@@ -115,4 +115,10 @@ function ver(n) {
     var id = 'fileMod' + n;
     var foto = '#foto' + n;
     envioFoto(id, foto);
+    //x.style.display="flex";
+}
+function verSolicitante(n){
+    var id="id"+n;
+    var x = document.getElementById(id);
+    x.style.display="flex";
 }

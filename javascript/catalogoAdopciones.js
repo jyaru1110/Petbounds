@@ -93,6 +93,82 @@ function mostrarPerros(){
     });
 }
 
+function mostrarSolicitantes(){
+    var idOrg = Cookies.get('id');
+    var enlace = 'aki pon el k sea xfas' + idOrg;
+    $.ajax({
+        type: 'GET',
+        url: enlace,
+        success:response=>{
+            var sol = response.resultado;
+            for(var ele of sol){
+                var htmlS = '<div class="linea-gestion">'+
+                '<div class="linea-imagen">'+
+                    '<img src="imagenes/img1.jpg" alt="">'+
+                '</div>'+
+                '<h5>'+ele.Nombre_Mascota+'</h5>'+
+                '<button class="botonGE boton2" onClick=verSolicitante("'+ele.ID_solicitudes+'")>Ver</button>'+
+            '</div>';
+                
+                var htmlS1='<div class="info-aplicante" id="id'+ele.ID_solicitudes+'">'+
+                '<div class="icono">'+
+                '<button>'+
+                    '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">'+
+                        '<path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>'+
+                    '</svg>'+
+                '</button>'+
+                '</div>'+
+                '<div class="info-aplicante-main">'+
+                    '<h5>Información del aplicante</h5>'+
+                    '<div class="linea-uno">'+
+                        '<div class="img-info-apl">'
+                            '<img src="imagenes/autoretrato diego de velazquez.jpg" alt="">'+
+                        '</div>'+
+                        '<div class="info-text">'+
+                            '<H5>'+ele.Nombre_Usuario+'</H5>'+
+                            '<div class="info-text-p">'+
+                                '<p>Hombre</p>'+
+                                '<p>47 años</p>'+
+                            '</div>'+
+                        '</div>'+
+                    '</div>'+
+                    '<button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-fill" viewBox="0 0 16 16">'+
+                        '<path d="M4 0h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm5.5 1.5v2a1 1 0 0 0 1 1h2l-3-3z"/>'+
+                    '</svg>'+
+                    '<p> Identificación oficial</p></button>'+
+                    '<embed src="https://nnov.hse.ru/data/2017/03/15/1112283148/program-1732155265-xsPmoe7O2q.pdf" type="application/pdf">'+
+                    '<button>'+
+                        '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-fill" viewBox="0 0 16 16">'+
+                            '<path d="M4 0h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm5.5 1.5v2a1 1 0 0 0 1 1h2l-3-3z"/>'
+                        '</svg>'+
+                        '<p> Comprobante de domicilio</p>'+
+                    '</button>'+
+                    '<embed src="https://archivefda.dlib.nyu.edu/jspui/bitstream/2451/31553/2/Dhar-DataScience.pdf" type="application/pdf">'+
+                    '<button>'
+                        '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-fill" viewBox="0 0 16 16">'+
+                            '<path d="M4 0h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm5.5 1.5v2a1 1 0 0 0 1 1h2l-3-3z"/>'+
+                        '</svg>'+
+                        '<p>Comprobante de pago</p>'+
+                    '</button>'+
+                    '<embed src="https://www.liebertpub.com/doi/pdfplus/10.1089/big.2013.1508" type="application/pdf">'+
+                '</div>'+
+                '<div class="botones-aplicante">'+
+                    '<button type="submit" class="boton2 botonGE">Aceptar</button>'+
+                    '<button type="submit" class="boton2 botonGE  rojo">Rechazar</button>'+
+                '</div>'+
+            '<button id="botonCerrar-embeds">'+
+                '<svg xmlns="http://www.w3.org/2000/svg" color="#F07160" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">'+
+                    '<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>'+
+                '</svg>'+
+            '</button>'+
+            '</div>';
+            $('.main-adop-gead').append(htmlS);
+            $('.main-adop-org').append(htmlS1);
+            }        
+        }
+    })
+}
+
 function gestPerros(){
     const fileSelector = document.getElementById('file');
     fileSelector.addEventListener('change', (event) => {
