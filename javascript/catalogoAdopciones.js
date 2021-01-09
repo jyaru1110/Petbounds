@@ -162,7 +162,8 @@ function mostrarSolicitantes(){
                 '</svg>'+
             '</button>'+
             '</div>';
-
+            $('.main-adop-gead').append(htmlS);
+            $('.main-adop-org').append(htmlS1);
             }        
         }
     })
