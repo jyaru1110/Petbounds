@@ -1,4 +1,6 @@
 function selecUsu() {
+    var url = Cookies.get('foto');
+    $('#fotoHead').attr('src', url);
     const fileSelector = document.getElementById('file');
     fileSelector.addEventListener('change', (event) => {
         const fileList = event.target.files;
