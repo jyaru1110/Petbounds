@@ -932,8 +932,8 @@ p{
     height: 150px;
 }
 .linea-imagen img{
-    width: 100%;
     height: 100%;
+    width: 100%;
 }
 .footer{
     bottom: 0;
@@ -1512,6 +1512,11 @@ p{
         font-size: 1.8rem;
     }
     .linea-imagen{
+        width: 110px;
+        height: 110px;
+    }
+    .div-imagen-perfil{
+        margin-top: 5%;
         width: 110px;
         height: 110px;
     }
