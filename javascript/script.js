@@ -117,8 +117,22 @@ function ver(n) {
     envioFoto(id, foto);
     //x.style.display="flex";
 }
-function verSolicitante(n){
-    var id="id"+n;
+function verSolicitante(n) {
+    var id = "id" + n;
     var x = document.getElementById(id);
-    x.style.display="flex";
+    x.style.display = "flex";
+}
+
+function rechazarSol(n) {
+    var enlace = 'http://localhost:3000/api/borrarSol?id=' + n;
+    $.ajax({
+        type: 'DELETE',
+        url: enlace,
+        success: response => {
+            location.reload();
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
 }
