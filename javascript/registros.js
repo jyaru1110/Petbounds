@@ -37,7 +37,7 @@ function regUsuario() {
         var gen = document.getElementById("gen").value;
         var fecha = document.getElementById("fecha").value;
         var nick = document.getElementById("nick").value;
-        var enlace = 'http://localhost:3000/api/formUsuario?correo=' + correo + '&contra=' + contras + '&nom=' + nombreCom + '&pat=null' + '&mat=null' + '&nick=' + nick + '&nac=' + fecha + '&gen=' + gen;
+        var enlace = 'http://161.35.132.152:3000/api/formUsuario?correo=' + correo + '&contra=' + contras + '&nom=' + nombreCom + '&pat=null' + '&mat=null' + '&nick=' + nick + '&nac=' + fecha + '&gen=' + gen;
         $.ajax({
             type: 'POST',
             url: enlace,
@@ -110,7 +110,7 @@ function regOrg() {
     if (cont === 3) {
         var org = document.getElementById("org").value;
         var pag = document.getElementById("pag").value;
-        var enlace = 'http://localhost:3000/api/formOrg?correo=' + correo + '&contra=' + contras + '&nom=' + org + '&tel=' + tele + '&pag=' + pag;
+        var enlace = 'http://161.35.132.152:3000/api/formOrg?correo=' + correo + '&contra=' + contras + '&nom=' + org + '&tel=' + tele + '&pag=' + pag;
         $.ajax({
             type: 'POST',
             url: enlace,
@@ -183,7 +183,7 @@ function regNeg() {
     if (cont === 3) {
         var neg = document.getElementById("neg").value;
         var ubi = document.getElementById("dir").value;
-        var enlace = 'http://localhost:3000/api/formNeg?correo=' + correo + '&contra=' + contras + '&nom=' + neg + '&tel=' + tele + '&ubi=' + ubi;
+        var enlace = 'http://161.35.132.152:3000/api/formNeg?correo=' + correo + '&contra=' + contras + '&nom=' + neg + '&tel=' + tele + '&ubi=' + ubi;
         $.ajax({
             type: 'POST',
             url: enlace,
@@ -230,7 +230,7 @@ function regMas() {
     var id = Cookies.get('id');
     var foto = Cookies.get('fotoMas');
     if (/[a-zA-z]/.test(nombre) && /[a-zA-z]/.test(raza)) {
-        var enlace = 'http://localhost:3000/api/altaMas?id=' + id + '&tipo=' + tipo + '&raza=' + raza + '&edad=' + edad + '&hist=' + desc + '&nom=' + nombre + '&foto=' + foto;
+        var enlace = 'http://161.35.132.152:3000/api/altaMas?id=' + id + '&tipo=' + tipo + '&raza=' + raza + '&edad=' + edad + '&hist=' + desc + '&nom=' + nombre + '&foto=' + foto;
         $.ajax({
             type: 'POST',
             url: enlace,
@@ -282,7 +282,7 @@ function regSol(){
     var idOf = Cookies.get('idOf');
     var comp_dom = Cookies.get('comp_dom');
     var comp_pago = Cookies.get('comp_pago');
-    var enlace = 'http://localhost:3000/api/regSolicitud?usu=' + id + '&mas=' + idSel + '&identi=' + idOf + '&comp=' + comp_dom + '&pago=' + comp_pago;
+    var enlace = 'http://161.35.132.152:3000/api/regSolicitud?usu=' + id + '&mas=' + idSel + '&identi=' + idOf + '&comp=' + comp_dom + '&pago=' + comp_pago;
     $.ajax({
         type: 'POST',
         url: enlace,
@@ -314,7 +314,7 @@ function modMas(){
     var nom = $('#nom' + id).val();
     var foto = Cookies.get('FotoModMas');
     console.log(foto);
-    var enlace = 'http://localhost:3000/api/modMas?id=' + id + '&tipo=' + tipo + '&raz=' + raza + '&edad=' + edad + '&hist=' + hist + '&nom=' + nom + '&foto=' + foto;
+    var enlace = 'http://161.35.132.152:3000/api/modMas?id=' + id + '&tipo=' + tipo + '&raz=' + raza + '&edad=' + edad + '&hist=' + hist + '&nom=' + nom + '&foto=' + foto;
     $.ajax({
         type: 'PUT',
         url: enlace,

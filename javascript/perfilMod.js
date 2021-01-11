@@ -5,7 +5,7 @@ function selecUsu() {
     fileSelector.addEventListener('change', (event) => {
         const fileList = event.target.files;
         console.log(fileList);
-        var enlace = 'http://localhost:3000/api/foto?nom=' + fileList[0].name + '&cont=' + fileList[0].type;
+        var enlace = 'http://161.35.132.152:3000/api/foto?nom=' + fileList[0].name + '&cont=' + fileList[0].type;
         $.ajax({
             type: 'GET',
             url: enlace,
@@ -36,7 +36,7 @@ function selecUsu() {
         });
     });
     var correo = Cookies.get('correo');
-    var enlace = 'http://localhost:3000/api/mostrarUsu?correo=' + correo;
+    var enlace = 'http://161.35.132.152:3000/api/mostrarUsu?correo=' + correo;
     $.ajax({
         type: 'GET',
         url: enlace,
@@ -64,7 +64,7 @@ function modUsu() {
     var nick = $('#nick').val();
     var nacimiento = $('#fecha').val();
     var url = Cookies.get('foto');
-    var enlace = 'http://localhost:3000/api/modUsu?id=' + id + '&nom=' + nombre + '&pat=null&mat=null&nick=' + nick + '&nac=' + nacimiento + '&foto=' + url;
+    var enlace = 'http://161.35.132.152:3000/api/modUsu?id=' + id + '&nom=' + nombre + '&pat=null&mat=null&nick=' + nick + '&nac=' + nacimiento + '&foto=' + url;
     $.ajax({
         type: 'PUT',
         url: enlace,
@@ -79,7 +79,7 @@ function modUsu() {
 }
 function borrarUsu() {
     var correo = Cookies.get('correo');
-    var enlace = 'http://localhost:3000/api/borrarUsu?correo=' + correo;
+    var enlace = 'http://161.35.132.152:3000/api/borrarUsu?correo=' + correo;
     $.ajax({
         type: 'DELETE',
         url: enlace,
