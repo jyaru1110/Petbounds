@@ -2,7 +2,7 @@ function mostrarPerros() {
     var url = Cookies.get('foto');
     $('#fotoHead').attr('src', url);
     var htmlS = '';
-    var enlace = 'http://localhost:3000/api/mostrarP';
+    var enlace = 'http://161.35.132.152:3000/api/mostrarP';
     $.ajax({
         type: 'GET',
         url: enlace,
@@ -95,7 +95,7 @@ function mostrarPerros() {
 
 function mostrarSolicitantes() {
     var idOrg = Cookies.get('id');
-    var enlace = 'http://localhost:3000/api/gestSol?id=' + idOrg;
+    var enlace = 'http://161.35.132.152:3000/api/gestSol?id=' + idOrg;
     $.ajax({
         type: 'GET',
         url: enlace,
@@ -186,7 +186,7 @@ function gestPerros() {
     fileSelector.addEventListener('change', (event) => {
         const fileList = event.target.files;
         console.log(fileList);
-        var enlace = 'http://localhost:3000/api/foto?nom=' + fileList[0].name + '&cont=' + fileList[0].type;
+        var enlace = 'http://161.35.132.152:3000/api/foto?nom=' + fileList[0].name + '&cont=' + fileList[0].type;
         $.ajax({
             type: 'GET',
             url: enlace,
@@ -218,7 +218,7 @@ function gestPerros() {
     });
     var htmlS = '';
     var idOrg = Cookies.get('id');
-    var enlace = 'http://localhost:3000/api/mostrarOrg?id=' + idOrg;
+    var enlace = 'http://161.35.132.152:3000/api/mostrarOrg?id=' + idOrg;
     $.ajax({
         type: 'GET',
         url: enlace,
