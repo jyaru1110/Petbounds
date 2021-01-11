@@ -124,7 +124,7 @@ function verSolicitante(n) {
 }
 
 function rechazarSol(n) {
-    var enlace = 'http://161.35.132.152:3000/api/borrarSol?id=' + n;
+    var enlace = 'http://161.35.132.152/api/borrarSol?id=' + n;
     $.ajax({
         type: 'DELETE',
         url: enlace,
