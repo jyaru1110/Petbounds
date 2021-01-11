@@ -84,7 +84,7 @@ function borrarUsu() {
         type: 'DELETE',
         url: enlace,
         success: response => {
-            location.href = 'paginaInicio.html'
+            location.href = 'index.html'
         },
         error: function (error) {
             console.log(error);
