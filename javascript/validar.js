@@ -22,7 +22,7 @@ function validacionInicio() {
         $('#errorContras').css('display','block');
         $('#errorContras').css('font-size','1rem');
     }
-    var enlace = 'http://161.35.132.152/api/inicio?correo=' + correo + '&contra=' + contras;
+    var enlace = 'https://petlimits.xyz/api/inicio?correo=' + correo + '&contra=' + contras;
     if (cont === 2) {
         $.ajax({
             type: 'GET',

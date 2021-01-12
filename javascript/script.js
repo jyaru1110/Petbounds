@@ -29,7 +29,7 @@ function envioArch(idIn, strDoc) {
     fileSelector.addEventListener('change', (event) => {
         const fileList = event.target.files;
         console.log(fileList);
-        var enlace = 'http://161.35.132.152:3000/api/foto?nom=' + fileList[0].name.replace(/\s/g, '') + '&cont=' + fileList[0].type;
+        var enlace = 'https://petlimits.xyz/api/foto?nom=' + fileList[0].name.replace(/\s/g, '') + '&cont=' + fileList[0].type;
         $.ajax({
             type: 'GET',
             url: enlace,
@@ -66,7 +66,7 @@ function envioFoto(idIn, strImg) {
     fileSelector.addEventListener('change', (event) => {
         const fileList = event.target.files;
         console.log(fileList);
-        var enlace = 'http://161.35.132.152:3000/api/foto?nom=' + fileList[0].name.replace(/\s/g, '') + '&cont=' + fileList[0].type;
+        var enlace = 'https://petlimits.xyz/api/foto?nom=' + fileList[0].name.replace(/\s/g, '') + '&cont=' + fileList[0].type;
         $.ajax({
             type: 'GET',
             url: enlace,
@@ -124,7 +124,7 @@ function verSolicitante(n) {
 }
 
 function rechazarSol(n) {
-    var enlace = 'http://161.35.132.152/api/borrarSol?id=' + n;
+    var enlace = 'https://petlimits.xyz/api/borrarSol?id=' + n;
     $.ajax({
         type: 'DELETE',
         url: enlace,
